@@ -5,13 +5,14 @@
   border: 0;
   outline: 0;
   box-sizing: border-box;
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
 }
 
 /* ===== Custom Properties ===== */
 :root {
   --color-primary: #f9f9f9;
   --color-secondary: #222a2f;
+  --color-footer: #000;
   --color-background: rgba(0, 0, 0, 0.75);
 
   --ff-h1: "Great Vibes", cursive;
@@ -30,16 +31,20 @@ h3,
 p {
   font-family: var(--ff-body-text);
 }
-h1,
-p {
-  padding: 1.5rem;
+
+.text {
+  padding: 0.5em 1.5rem 1.5rem 1.5rem;
+}
+
+.copy-text {
+  padding: 0.5rem;
 }
 
 img {
   width: 100%;
   width: 200px;
   height: 200px;
-  margin: 0 10px;
+  margin: 10px 10px;
 }
 
 .text-center {
@@ -48,7 +53,8 @@ img {
 
 /* ===== Containers ===== */
 .container-main {
-  background-image: url("CVimages/main-background-starry-night.jpg");
+  margin: 0;
+  background-image: url("CVimages/main-background-starry-night.png");
   background-color: black;
   /* object-fit: cover;
   width: 100% ; */
@@ -59,7 +65,7 @@ img {
 
 .container-sub {
   background-color: var(--color-background);
-  width: 90%;
+  margin: 5%;
   border: 1px solid var(--color-primary);
 }
 /* .container-sub:before {
@@ -76,23 +82,35 @@ img {
 .container-header {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container-footer {
+  background-color: var(--color-footer);
+  text-align: center;
+  font-size: 0.7rem;
+  padding: 0.5rem;
 }
 
 /* ===== Header ===== */
 .geralt-text {
   font-family: var(--ff-h1);
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 400;
+  padding: 1.5rem;
   margin-bottom: -0.6em;
 }
 .byline {
   font-family: var(--ff-h1-byline);
-  font-size: 1.5rem;
+  font-size: 0.8rem;
   font-weight: 400;
+  margin-top: -0.8rem;
+  margin-left: 13.5rem;
+  padding: 1.5rem;
 }
 .heading-divider {
   background-color: var(--color-primary);
-  height: 2px;
+  height: 1.5px;
   width: 95%;
   margin-right: auto;
   margin-left: auto;
