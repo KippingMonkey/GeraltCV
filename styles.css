@@ -17,15 +17,16 @@
 
   --ff-h1: "Great Vibes", cursive;
   --ff-h1-byline: "Libre Baskerville", serif;
-  --ff-body-text: "Kaisei Tokumin", serif;
-  --ff-footer-text: "Arial", Helvetica, sans-serif;
+  --ff-body-text: "Quicksand", sans-serif;
+  --ff-footer-text: "Quicksand", sans-serif;
 }
 
-/* ===== General Elements Styling & utility classes ===== */
+/* ===== General spacing, size & utility classes ===== */
 h1,
 h3,
 p,
-li {
+li,
+a {
   color: var(--color-primary);
 }
 
@@ -43,22 +44,27 @@ li {
 }
 h3 {
   font-size: 1.5rem;
-  margin-bottom: 0.6em;
-  width: 70%;
+  margin-bottom: 0.3em;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
+.text > p,
+.text > ul {
+  margin-bottom: 1.5rem;
+  margin-top: 0.5em;
+}
+.text > ul {
+  padding-left: 1em;
+}
 
 .text {
-  margin: 0.5em 1.5rem 1.5rem 1.5rem;
-  text-align: center;
-}
-@media (min-width: 502px) {
-  .text {
-    background-color: var(--color-secondary);
-    padding: 1rem;
-    border-radius: 10px;
-  }
+  width: 310px;
+  text-align: left;
+  margin: 1rem auto;
+  background-color: var(--color-secondary);
+  border-radius: 10px;
+  padding: 1em;
 }
 @media (min-width: 700px) {
   .text {
@@ -67,19 +73,14 @@ h3 {
   }
 }
 
-.copy-text {
-  font-size: 0.6rem;
-  font-family: var(--ff-footer-text);
-  padding: 0.5rem;
-}
-
 img {
   width: 100%;
   width: 200px;
   height: 200px;
   margin: 10px;
 }
-@media (min-width: 700px) {
+
+@media (min-width: 743px) {
   img {
     width: 90px;
     height: 90px;
@@ -95,13 +96,17 @@ img {
   }
 }
 
+.copy-text {
+  font-size: 0.6rem;
+  font-family: var(--ff-footer-text);
+  padding: 0.5em;
+}
+
 /* ========== Containers ========== */
 .container-main {
   margin: 0;
   background-image: url("CVimages/main-background-starry-night.png");
   background-color: black;
-  /* object-fit: cover;
-  width: 100% ; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -140,14 +145,14 @@ img {
   margin-bottom: 1.5rem;
   padding-left: 45px;
 }
-@media (min-width: 502px) {
+/* @media (min-width: 502px) {
   .container-profile-grid {
     grid-template-columns: repeat(4, 1fr);
     width: 400px;
     padding: 0;
     margin-bottom: 0;
   }
-}
+} */
 @media (min-width: 700px) {
   .container-profile-grid {
     grid-template-columns: 1fr 1fr;
@@ -188,7 +193,7 @@ img {
 .byline {
   font-family: var(--ff-h1-byline);
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 200;
   margin-top: -0.8rem;
   margin-left: 8rem;
   padding: 1.5rem;
@@ -203,11 +208,18 @@ img {
 
 .heading-divider {
   background-color: var(--color-primary);
-  height: 1.5px;
+  height: 1px;
   width: 95%;
   margin-right: auto;
   margin-left: auto;
 }
 .heading {
   text-align: center;
+}
+
+/* ========== Main ========== */
+
+.cv-list {
+  list-style-position: inside;
+  list-style: circle;
 }
