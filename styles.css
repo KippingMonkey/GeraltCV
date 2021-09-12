@@ -94,7 +94,7 @@ img {
   justify-content: center;
 }
 
-.container-profile-grid {
+<<<<<<< HEAD .container-profile-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: start;
@@ -108,6 +108,7 @@ img {
 .container-footer {
   background-color: var(--color-footer);
   text-align: center;
+  font-size: 0.7rem;
   padding: 0.5rem;
 }
 
@@ -133,7 +134,7 @@ img {
 .heading-divider {
   background-color: var(--color-primary);
   height: 1.5px;
-  width: 90%;
+  width: 95%;
   margin-right: auto;
   margin-left: auto;
 }
