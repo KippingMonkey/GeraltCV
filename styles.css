@@ -79,10 +79,10 @@ img {
   height: 200px;
   margin: 10px 10px;
 }
-@media (min-width: 743px) {
+@media (min-width: 700px) {
   img {
-    width: 88px;
-    height: 88px;
+    width: 90px;
+    height: 90px;
   }
 }
 
@@ -128,9 +128,6 @@ img {
   justify-content: center;
 }
 @media (min-width: 743px) {
-  .container-header {
-    flex-direction: row;
-  }
   .img-profile {
     order: 1;
   }
