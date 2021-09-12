@@ -35,12 +35,20 @@ li {
   font-family: var(--ff-body-text);
 }
 h3 {
+  font-size: 1.5rem;
   margin-bottom: 0.6em;
 }
 
 .text {
   margin: 0.5em 1.5rem 1.5rem 1.5rem;
   text-align: center;
+}
+@media (min-width: 502px) {
+  .text {
+    background-color: var(--color-secondary);
+    padding: 1rem;
+    border-radius: 10px;
+  }
 }
 
 .copy-text {
@@ -104,6 +112,14 @@ img {
   margin-bottom: 1.5rem;
   padding-left: 45px;
 }
+@media (min-width: 502px) {
+  .container-profile-grid {
+    grid-template-columns: repeat(4, 1fr);
+    width: 400px;
+    padding: 0;
+    margin-bottom: 0;
+  }
+}
 
 .container-footer {
   background-color: var(--color-footer);
@@ -120,6 +136,11 @@ img {
   padding: 1.5rem;
   margin-bottom: -0.6em;
 }
+@media (min-width: 502px) {
+  .geralt-text {
+    font-size: 5rem;
+  }
+}
 
 .byline {
   font-family: var(--ff-h1-byline);
@@ -129,6 +150,12 @@ img {
   margin-left: 8rem;
   padding: 1.5rem;
   width: 70%;
+}
+@media (min-width: 502px) {
+  .byline {
+    font-size: 1.2rem;
+    margin-left: 11.5rem;
+  }
 }
 
 .heading-divider {
@@ -141,3 +168,5 @@ img {
 .heading {
   text-align: center;
 }
+
+/* ===== Breakpoint 502px ===== */
