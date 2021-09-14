@@ -1,14 +1,15 @@
-/* ========== General Reset ========== */
+/* =============== General Reset =============== */
 * {
   margin: 0;
   padding: 0;
   border: 0;
   outline: 0;
   box-sizing: border-box;
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
+  /* used when editing layout to get better visual understanding */
 }
 
-/* ========== Custom Properties ========== */
+/* =============== Custom Properties =============== */
 :root {
   --color-primary: #f9f9f9;
   --color-secondary: #222a2f;
@@ -21,18 +22,20 @@
   --ff-footer-text: "Quicksand", sans-serif;
 }
 
-/* ===== General spacing, size & utility classes ===== */
+/* =============== General Styling =============== */
 h1,
 h3,
 p,
 li,
-a {
+a,
+label {
   color: var(--color-primary);
 }
 
 h3,
 p,
-li {
+li,
+label {
   font-family: var(--ff-body-text);
 }
 
@@ -47,40 +50,11 @@ h3 {
 .text > ul {
   margin-bottom: 1.5rem;
   margin-top: 0.5em;
+  line-height: 1.5;
 }
 .text > ul {
   padding-left: 1em;
 }
-
-.text {
-  width: 70%;
-  text-align: left;
-  margin: 1rem auto;
-  background-color: var(--color-secondary);
-  border-radius: 10px;
-  padding: 1em;
-}
-@media (min-width: 800px) {
-  .text {
-    width: 350px;
-    text-align: left;
-  }
-}
-
-img {
-  width: 100%;
-  width: 120px;
-  height: 120px;
-  margin: 10px;
-}
-
-@media (min-width: 800px) {
-  img {
-    width: 150px;
-    height: 150px;
-  }
-}
-
 .text-center {
   text-align: center;
 }
@@ -90,17 +64,28 @@ img {
     width: 100%;
   }
 }
-
-.copy-text {
-  font-size: 0.6rem;
-  font-family: var(--ff-footer-text);
-  margin: 0.3em;
-}
-.copy-top {
-  padding: 0.5em;
+/* =============== Images =============== */
+img {
+  width: 100%;
+  width: 120px;
+  height: 120px;
+  margin: 10px;
 }
 
-/* ========== Containers ========== */
+@media (min-width: 800px) {
+  img {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media (min-width: 900px) {
+  img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* =============== General Containers =============== */
 .container-main {
   margin: 0;
   background-image: url("CVimages/main-background-starry-night.png");
@@ -116,12 +101,13 @@ img {
   border: 1px solid var(--color-primary);
 }
 
+/* =============== Header Section =============== */
 .container-header {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-/* @media (min-width: 1000px) {
+@media (min-width: 800px) {
   .img-profile {
     order: 1;
   }
@@ -131,8 +117,80 @@ img {
   .img-logo {
     order: 3;
   }
-} */
+}
+.geralt-text {
+  font-family: var(--ff-h1);
+  font-size: 3.5rem;
+  font-weight: 400;
+  padding: 1.5rem;
+  margin-bottom: -2.5rem;
+  width: 400px;
+}
+@media (min-width: 550px) {
+  .geralt-text {
+    font-size: 5rem;
+    margin-bottom: -3rem;
+    width: 620px;
+    text-align: center;
+  }
+}
+@media (min-width: 800px) {
+  .geralt-text {
+    width: 500px;
+  }
+}
 
+@media (min-width: 1110px) {
+  .geralt-text {
+    font-size: 6.5rem;
+    margin-bottom: -3.5rem;
+    width: 700px;
+  }
+}
+
+.byline {
+  font-family: var(--ff-h1-byline);
+  font-size: 0.8rem;
+  font-weight: 200;
+  margin-top: -1.1rem;
+  margin-left: 9rem;
+  padding: 1.5rem;
+  width: 70%;
+}
+@media (min-width: 550px) {
+  .byline {
+    font-size: 1.2rem;
+    margin-left: 13.5rem;
+  }
+}
+@media (min-width: 1110px) {
+  .byline {
+    font-size: 1.4rem;
+    margin-left: 17rem;
+  }
+}
+
+.heading-divider {
+  background-color: var(--color-primary);
+  height: 1px;
+  width: 95%;
+  margin-right: auto;
+  margin-left: auto;
+  /* margin-bottom: 5px; */
+}
+.heading {
+  text-align: center;
+}
+
+/* =============== Main Section =============== */
+@media (min-width: 700px) {
+  .container-text {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 .container-profile-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -156,85 +214,73 @@ img {
     width: 100%;
   }
 }
-
-@media (min-width: 700px) {
-  .container-text {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+.text1,
+.text2,
+.text3 {
+  width: 70%;
+  text-align: left;
+  margin: 1rem auto;
+  background-color: var(--color-secondary);
+  border-radius: 10px;
+  padding: 1em;
+}
+@media (min-width: 800px) {
+  .text1,
+  .text2,
+  .text3 {
+    width: 47%;
+    text-align: left;
+  }
+}
+@media (min-width: 900px) {
+  .text1,
+  .text2,
+  .text3 {
+    width: 30%;
+    text-align: left;
+  }
+}
+@media (min-width: 1110px) {
+  .text1 {
+    width: 27%;
+  }
+  .text2 {
+    width: 40%;
+  }
+  .text3 {
+    width: 27%;
   }
 }
 
+.cv-list {
+  list-style-position: inside;
+  list-style: circle;
+}
+
+.submitbtn,
+.email {
+  font-family: var(--ff-body-text);
+  width: 200px;
+  height: 1.5em;
+  margin: 5px 0;
+}
+.submitbtn {
+  color: var(--color-secondary);
+  font-weight: bold;
+}
+/* =============== Footer Section =============== */
 .container-footer {
   background-color: var(--color-footer);
   text-align: center;
   font-size: 0.7rem;
   padding: 0.5rem;
+  height: 100px;
 }
-
-/* ========== Header ========== */
-.geralt-text {
-  font-family: var(--ff-h1);
-  font-size: 3.5rem;
-  font-weight: 400;
-  padding: 1.5rem;
-  margin-bottom: -2.5rem;
-  width: 400px;
+.copy-text {
+  font-size: 0.6rem;
+  font-family: var(--ff-footer-text);
+  margin: 0.3em;
 }
-@media (min-width: 550px) {
-  .geralt-text {
-    font-size: 5rem;
-    margin-bottom: -3rem;
-    width: 550px;
-  }
-}
-@media (min-width: 700px) {
-  .geralt-text {
-    font-size: 6.5rem;
-    margin-bottom: -3.5rem;
-    width: 700px;
-    text-align: center;
-  }
-}
-
-.byline {
-  font-family: var(--ff-h1-byline);
-  font-size: 0.8rem;
-  font-weight: 200;
-  margin-top: -1.1rem;
-  margin-left: 9rem;
-  padding: 1.5rem;
-  width: 70%;
-}
-@media (min-width: 550px) {
-  .byline {
-    font-size: 1.2rem;
-    margin-left: 12.5rem;
-  }
-}
-@media (min-width: 700px) {
-  .byline {
-    font-size: 1.4rem;
-    margin-left: 16rem;
-  }
-}
-
-.heading-divider {
-  background-color: var(--color-primary);
-  height: 1px;
-  width: 95%;
-  margin-right: auto;
-  margin-left: auto;
-  /* margin-bottom: 5px; */
-}
-.heading {
-  text-align: center;
-}
-
-/* ========== Main ========== */
-
-.cv-list {
-  list-style-position: inside;
-  list-style: circle;
+.copy-top {
+  padding: 0.5em;
 }
