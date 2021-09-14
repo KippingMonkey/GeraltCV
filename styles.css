@@ -163,6 +163,11 @@ img {
     margin-left: 13.5rem;
   }
 }
+@media (min-width: 800px) {
+  .byline {
+    margin-left: 12.5rem;
+  }
+}
 @media (min-width: 1110px) {
   .byline {
     font-size: 1.4rem;
